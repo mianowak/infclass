@@ -8,14 +8,6 @@ print('''
 
     ''')
 
-xx = "34"
-# xy = "17"
-
-_xx = float(xx)
-# _xy = int(xy)
-
-# zz = float("7.9")
-
 
 menu0 = input("a / b ? ")
 if "a" == menu0:
