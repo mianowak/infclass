@@ -4,7 +4,6 @@ print('''
     Chcesz pracować z figurami czy bryłami
     a - Figury
     b - Bryły
-    ...
 
     ''')
 
