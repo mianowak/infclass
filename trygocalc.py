@@ -20,8 +20,6 @@ if "a" == menu0:
     e - pp równolegloboku
     f - pp romb
     g - pp koło
-    ...
-
     ''')
     inp = input("? ")
 
@@ -54,7 +52,7 @@ if "a" == menu0:
                 break
 
         h = float(input("podaj długosc wysokosci (h): "))
-        pptrapezu = (a+b) * h / 2
+        pptrapezu = (a+b) * h  / 2
         print(f"Pole powierzchni trapezu o podstawie {a} i {b} i wysokosci {h} = {pptrapezu}")
     elif inp == "e":
         a = float(input("podaj dlugosc boku (a): "))
@@ -68,8 +66,6 @@ elif "b" == menu0:
     a - pp szescianu
     b - pp prostoadloscianu
     c - pp graniastoslup prosty 
-    ...
-
     ''')
     inp = input("?")
     if inp == "a":
