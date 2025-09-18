@@ -3,26 +3,28 @@ import math
 pi = math.pi
 
 print('''
-    Chcesz pracować z figurami czy bryłami
+    Chcesz pracować z figurami czy bryłami czy z obwodami figur czy z 
     a - Figury
     b - Bryły
     c - obwod figury
-    d - obwod bryły
+    d- obwod bryły
 
     ''')
 
-menu0 = input("a / b / c / d ? ")
 
-if menu0 == "a":
+menu0 = input("a / b / c / d? ")
+
+if "a" == menu0:
     print('''
     wybierz co chcesz policzyć
     a - pp kwadatu
     b - pp prostokata
     c - pp trójkąta
-    d - pp trapezu
-    e - pp równolegloboku
+    d - pp równolegloboku
+    e - pp trapezu
     f - pp romb
-    g - pp koło
+    g - pp kolo
+    h - pp trojkat rownoboczny 
     ''')
     inp = input("? ")
 
@@ -61,10 +63,23 @@ if menu0 == "a":
         a = float(input("podaj dlugosc boku (a): "))
         h = float(input("podaj dlugosc wysokosci (h): "))
         print(f"polo powierzchni równolegloboku o podstawie {a} i wysokosci {h} = {a*h}")
+
+    elif inp == "f":
+        a = float(input("podaj dlugosc boku (s):"))
+        h = float(input("podaj dlugosc wysokosci (h):"))
+        print(f"pole powierzchni rombu o boku {a} i wysokosci {h} = {a*h}")
+    elif inp == "g":
+        r = float(input("podaj dlugosc promienia (r): "))
+        print(f"pole powierzchni kola o promieniu {r} = {pi*r**2}")
+    elif inp == "h":
+        a = float(input("podaj dlugosc boku (a): "))
+        print(f"pole powierzchni trojkata rownoboicznego o boku {a} = {math.sqrt(3/4*a**2)}")
+
+
     else:
         print("tego nie obsługujemy")
 
-elif menu0 == "b":
+elif "b" == menu0:
     print('''
     a - pp szescianu
     b - pp prostoadloscianu
@@ -75,7 +90,7 @@ elif menu0 == "b":
     g - pp kula
     
     ''')
-    inp = input("? ")
+    inp = input("?")
     if inp == "a":
         a = float(input("a = "))
         print(f"ppSzecianu dla a={a} = {a**2*6}")  
@@ -115,73 +130,67 @@ elif menu0 == "b":
         r = float(input("podaj dlugosc promienia kuli (r):"))
         pk = 4/3 * pi * r**3
         print(f"podaj pole calkowite kuli o promieniu {r} = {pk}")
-    else:
-        print(f"Opcja niedostępna")
 
-elif menu0 == "c":
-    print("Wybierz figure:")
-    print("a - kwadrat")
-    print("b - prostokat")
-    print("c - trojkat")
-    print("d - trapez")
-    print("e - rownoleglobok")
-    print("f - romb")
-    print("g - kola")
+elif "c" == menu0:
+        print("Wybierz figure:")
+        print("a - kwadrat")
+        print("b - prostokat")
+        print("c - trojkat")
+        print("d - trapez")
+        print("e - rownoleglobok")
+        print("f - romb")
+        print("g - kola")
     
-    inp = input("? ")
-
-    if inp == "a":
+inp = input("?")
+if inp == "a":
         a = float(input("podaj dlugosc boku kwadratu (a):"))
         print(f"obwod kwadratu o boku {a} = {4*a}")
 
-    elif inp == "b":
+elif inp == "b":
         a = float(input("podaj dlugosc boku (a):"))
         b = float(input("podaj dlugosc boku (b):"))
         print(f"obwod prostokata o bokach {a} i {b} = {2*(a+b)}")
         
-    elif inp == "c":
+elif inp == "c":
         a = float(input("podaj dligosc boku (a):"))
         b = float(input("podaj dlugosc boku (b):"))
         c = float(input("podaj dlugosc boku (c):"))
         print(f" obwod trojkata o bokach {a} i {b} i {c} = {a+b+c}")
         
 
-    elif inp == "d":
+elif inp == "d":
+
         a = float(input("podaj dlugosc boku (a):"))
         b = float(input("podaj dlugosc boku (b):"))
         c = float(input("podaj dlugosc boku (c):"))
         d = float(input("podaj dlugosc boku (d):"))
         print(f"obwod trapezu o bokach {a} i {b} i {c} i {d} = {a+b+c+d}")
 
-    elif inp == "e":
+elif inp == "e":
         a = float(input("podaj dlugosc boku (a):"))
         b = float(input("podaj dlugosc boku (b):"))
         print(f"obwod rownolegloboku o bokach {a} i {b} = {2*a + 2*b }")
 
 
-    elif inp == "f":
+elif inp == "f":
         a = float(input("podaj dlugosc boku (a):"))
         b = float(input("podaj dlugosc boku (b):"))
         print(f"obwod rombu o bokach {a} i {b} = {4*a}")
 
-    elif inp == "g":
+elif inp == "g":
         r = float(input("podaj dlugosc promienia (r):"))
         print(f"obwod kola o promieniu {r} = {2*pi*r}")
-    else:
-        print("zła komenda")
 
-elif menu0 == "d":
-    print('''
-    objetosci bryl
-    a - o szescian
-    b - o prostopadlocian
-    c - o graniastoslup
-    d - o ostroslup
-    e - o walec
-    f - o stozek
-    g - kula''')
+elif "d" == menu0:   
+    print("objetosci bryl")
+    print("a - o szescian")
+    print("b - o prostopadlocian")
+    print("c - o graniastoslup")
+    print("d - o ostroslup")
+    print("e - o walec")
+    print("f - o stozek")
+    print("g -  o kula")
 
-    inp = input("? ") 
     if inp == "a":
         a = float(input("podaj dlugosc krawedzi (a):"))
         print(f"objetosc szescianu o krawedzi {a} = {a**3}")
