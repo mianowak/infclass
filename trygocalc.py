@@ -7,14 +7,13 @@ print('''
     a - Figury
     b - Bryły
     c - obwod figury
-    d- obwod bryły
+    d - obwod bryły
 
     ''')
 
+menu0 = input("a / b / c / d ? ")
 
-menu0 = input("a / b / c / d? ")
-
-if "a" == menu0:
+if menu0 == "a":
     print('''
     wybierz co chcesz policzyć
     a - pp kwadatu
@@ -65,7 +64,7 @@ if "a" == menu0:
     else:
         print("tego nie obsługujemy")
 
-elif "b" == menu0:
+elif menu0 == "b":
     print('''
     a - pp szescianu
     b - pp prostoadloscianu
@@ -76,7 +75,7 @@ elif "b" == menu0:
     g - pp kula
     
     ''')
-    inp = input("?")
+    inp = input("? ")
     if inp == "a":
         a = float(input("a = "))
         print(f"ppSzecianu dla a={a} = {a**2*6}")  
@@ -116,18 +115,20 @@ elif "b" == menu0:
         r = float(input("podaj dlugosc promienia kuli (r):"))
         pk = 4/3 * pi * r**3
         print(f"podaj pole calkowite kuli o promieniu {r} = {pk}")
+    else:
+        print(f"Opcja niedostępna")
 
-    elif "c" == menu0:
-        print("Wybierz figure:")
-        print("a - kwadrat")
-        print("b - prostokat")
-        print("c - trojkat")
-        print("d - trapez")
-        print("e - rownoleglobok")
-        print("f - romb")
-        print("g - kola")
+elif menu0 == "c":
+    print("Wybierz figure:")
+    print("a - kwadrat")
+    print("b - prostokat")
+    print("c - trojkat")
+    print("d - trapez")
+    print("e - rownoleglobok")
+    print("f - romb")
+    print("g - kola")
     
-    inp = input("?")
+    inp = input("? ")
 
     if inp == "a":
         a = float(input("podaj dlugosc boku kwadratu (a):"))
@@ -166,17 +167,21 @@ elif "b" == menu0:
     elif inp == "g":
         r = float(input("podaj dlugosc promienia (r):"))
         print(f"obwod kola o promieniu {r} = {2*pi*r}")
+    else:
+        print("zła komenda")
 
-    elif "d" == menu0:
-        print("objetosci bryl")
-        print("a - o szescian")
-        print("b - o prostopadlocian")
-        print("c - o graniastoslup")
-        print("d - o ostroslup")
-        print("e - o walec")
-        print("f - o stozek")
-        print("g - kula")
+elif menu0 == "d":
+    print('''
+    objetosci bryl
+    a - o szescian
+    b - o prostopadlocian
+    c - o graniastoslup
+    d - o ostroslup
+    e - o walec
+    f - o stozek
+    g - kula''')
 
+    inp = input("? ") 
     if inp == "a":
         a = float(input("podaj dlugosc krawedzi (a):"))
         print(f"objetosc szescianu o krawedzi {a} = {a**3}")
