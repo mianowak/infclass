@@ -233,7 +233,7 @@ def obsluga_obj_bryl():
 
 
 ## tu zaczyna się wykonanie programu
-
+## główna pętla
 while True:
     print('''
         
