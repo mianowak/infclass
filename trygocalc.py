@@ -132,54 +132,54 @@ elif "b" == menu0:
         print(f"podaj pole calkowite kuli o promieniu {r} = {pk}")
 
 elif "c" == menu0:
-        print("Wybierz figure:")
-        print("a - kwadrat")
-        print("b - prostokat")
-        print("c - trojkat")
-        print("d - trapez")
-        print("e - rownoleglobok")
-        print("f - romb")
-        print("g - kola")
+    print("Wybierz figure:")
+    print("a - kwadrat")
+    print("b - prostokat")
+    print("c - trojkat")
+    print("d - trapez")
+    print("e - rownoleglobok")
+    print("f - romb")
+    print("g - kola")
     
-inp = input("?")
-if inp == "a":
-        a = float(input("podaj dlugosc boku kwadratu (a):"))
-        print(f"obwod kwadratu o boku {a} = {4*a}")
+    inp = input("?")
+    if inp == "a":
+            a = float(input("podaj dlugosc boku kwadratu (a):"))
+            print(f"obwod kwadratu o boku {a} = {4*a}")
 
-elif inp == "b":
-        a = float(input("podaj dlugosc boku (a):"))
-        b = float(input("podaj dlugosc boku (b):"))
-        print(f"obwod prostokata o bokach {a} i {b} = {2*(a+b)}")
-        
-elif inp == "c":
-        a = float(input("podaj dligosc boku (a):"))
-        b = float(input("podaj dlugosc boku (b):"))
-        c = float(input("podaj dlugosc boku (c):"))
-        print(f" obwod trojkata o bokach {a} i {b} i {c} = {a+b+c}")
-        
+    elif inp == "b":
+            a = float(input("podaj dlugosc boku (a):"))
+            b = float(input("podaj dlugosc boku (b):"))
+            print(f"obwod prostokata o bokach {a} i {b} = {2*(a+b)}")
+            
+    elif inp == "c":
+            a = float(input("podaj dligosc boku (a):"))
+            b = float(input("podaj dlugosc boku (b):"))
+            c = float(input("podaj dlugosc boku (c):"))
+            print(f" obwod trojkata o bokach {a} i {b} i {c} = {a+b+c}")
+            
 
-elif inp == "d":
+    elif inp == "d":
 
-        a = float(input("podaj dlugosc boku (a):"))
-        b = float(input("podaj dlugosc boku (b):"))
-        c = float(input("podaj dlugosc boku (c):"))
-        d = float(input("podaj dlugosc boku (d):"))
-        print(f"obwod trapezu o bokach {a} i {b} i {c} i {d} = {a+b+c+d}")
+            a = float(input("podaj dlugosc boku (a):"))
+            b = float(input("podaj dlugosc boku (b):"))
+            c = float(input("podaj dlugosc boku (c):"))
+            d = float(input("podaj dlugosc boku (d):"))
+            print(f"obwod trapezu o bokach {a} i {b} i {c} i {d} = {a+b+c+d}")
 
-elif inp == "e":
-        a = float(input("podaj dlugosc boku (a):"))
-        b = float(input("podaj dlugosc boku (b):"))
-        print(f"obwod rownolegloboku o bokach {a} i {b} = {2*a + 2*b }")
+    elif inp == "e":
+            a = float(input("podaj dlugosc boku (a):"))
+            b = float(input("podaj dlugosc boku (b):"))
+            print(f"obwod rownolegloboku o bokach {a} i {b} = {2*a + 2*b }")
 
 
-elif inp == "f":
-        a = float(input("podaj dlugosc boku (a):"))
-        b = float(input("podaj dlugosc boku (b):"))
-        print(f"obwod rombu o bokach {a} i {b} = {4*a}")
+    elif inp == "f":
+            a = float(input("podaj dlugosc boku (a):"))
+            b = float(input("podaj dlugosc boku (b):"))
+            print(f"obwod rombu o bokach {a} i {b} = {4*a}")
 
-elif inp == "g":
-        r = float(input("podaj dlugosc promienia (r):"))
-        print(f"obwod kola o promieniu {r} = {2*pi*r}")
+    elif inp == "g":
+            r = float(input("podaj dlugosc promienia (r):"))
+            print(f"obwod kola o promieniu {r} = {2*pi*r}")
 
 elif "d" == menu0:   
     print("objetosci bryl")
@@ -191,6 +191,7 @@ elif "d" == menu0:
     print("f - o stozek")
     print("g -  o kula")
 
+    inp = input("? ")
     if inp == "a":
         a = float(input("podaj dlugosc krawedzi (a):"))
         print(f"objetosc szescianu o krawedzi {a} = {a**3}")
