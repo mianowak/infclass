@@ -40,3 +40,58 @@ else:
         silnia *= n
         n -= 1
     print(silnia)
+
+    #wczytaj n i sprawdz czy jest podzielna 2, dzielac n przez 2 dopuki n%2==0
+    n = int(input("podaj liczbe n :"))
+    if n<= 0:
+        print("blad")
+    else:
+        while n % 2 == 0:
+            n //= 2
+            if n == 1:
+                print("tak")
+            else:
+                print("nie")
+
+    #wypisz liczby od 1-10
+    i = 1
+    while i <= 10:
+        print(i)
+
+    #wypisz liczby od 10-1
+    i = 10
+    while i >= 1:
+        print(i)
+        i -= 1
+
+    #wypisz wszystkie liczby parzyste   od 1-100          
+    i = 1
+    while i <= 100:
+        if i % 2 == 0:
+            print(i)
+        i += 1
+
+    #wypisz wszystkie liczby nieparzyste od 1-100
+    i = 1 
+    while i <= 100:
+        if i % 2 != 0:
+            print(i)
+            i += 1
+
+    # wypisz liczby podzielne przez 7 od 1-100
+    n = 1
+    while n<=100:
+        if n % 7 == 0:
+            print(n)
+            n += 1
+
+    #napisz program ktory pyta uzytkownika o liczbe n a nastepnie oblicza silnie tej liczby 
+    n = int(input("podaj liczbe n :"))
+    if n < 0:
+        print("blad")
+    else:
+        silnia = 1
+        while n > 1:
+            silnia *= n
+            n -= 1
+            print(silnia)
