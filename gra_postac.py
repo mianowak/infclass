@@ -47,8 +47,8 @@ wartosc_zlego_owocu = {
     "pomarancza": "-2"
 }
 
-while int(postac["hp_postaci"]) > 0 and int(goblin["hp_goblina"]) > 0:
-    postac["pozycja_postaci"] += 1
+while int(postac['hp_postaci']) > 0 and int(goblin['hp_goblina']) > 0:
+    postac['pozycja_postaci'] += 1
     print("znajdujesz sie na 1 polu")
 
     # losujemy co przytrawi sie postaci
@@ -56,8 +56,8 @@ while int(postac["hp_postaci"]) > 0 and int(goblin["hp_goblina"]) > 0:
 
 if wydarzenia == "dobry owoc":
     owoc = random.choice(dobre_owoce)
-    postac["hp_postaci"] += int(wartosc_dobrego_owocu[owoc])
-    postac["sila_postaci"] += int(wartosc_dobrego_owocu[owoc])
+    postac['hp_postaci'] += int(wartosc_dobrego_owocu[owoc])
+    postac['sila_postaci'] += int(wartosc_dobrego_owocu[owoc])
     print("twoja postac znalazla " + owoc + " i zyskuje punkty zdrowia i sily.")
 elif wydarzenia == "zly owoc":
     owoc = random.choice(zle_owoce)
@@ -72,29 +72,29 @@ else:
     #atak postaci
     akcja_postaci = input("wybierz akcje postaci: atak lub leczenie lub obrona:")
     if akcja_postaci == "atak":
-        obrazenia = postac["atak"] - goblin["obrona"]
+        obrazenia = postac['atak'] - goblin['obrona']
         goblin["hp"] -= obrazenia
-        print(f"{postac["imie"]} zadaje {obrazenia} obrazen goblinowi. jego hp to {goblin["hp"]}")
+        print(f"{postac['imie']} zadaje {obrazenia} obrazen goblinowi. jego hp to {goblin['hp']}")
     elif akcja_postaci == "leczenie":
         postac["hp"] += postac["leczenie"]
-        print(f"{postac["imie"]} leczy sie o {postac["leczenie"]} punktow. jego hp to {postac["hp"]}")
+        print(f"{postac['imie']} leczy sie o {postac['leczenie']} punktow. jego hp to {postac['hp']}")
     elif akcja_postaci == "obrona":
         postac["obrona"] += 5
-        print(f"{postac["imie"] } zwieksza swoja obrone o 5. jego obrona to {postac["obrona"]}")
+        print(f"{postac['imie']} zwieksza swoja obrone o 5. jego obrona to {postac['obrona']}")
         if goblin["hp"] <= 0:
             print("postac wygrywa!")
     #atak goblina
     akcja_goblina = input("wybierz akcje goblina: atak lub leczenie lub obrona:")
     if akcja_goblina == "atak":
-        obrazenia = goblin["atak"] - postac["obrona"]
-        postac["hp"] -= obrazenia
-        print(f"{goblin["imie"]} zadaje {obrazenia} obrazenia postaci. jego hp to {postac["hp"]}")
+        obrazenia = goblin['atak'] - postac['obrona']
+        postac['hp'] -= obrazenia
+        print(f"{goblin['imie']} zadaje {obrazenia} obrazenia postaci. jego hp to {postac['hp']}")
     elif akcja_goblina == "leczenie":
-        goblin["hp"] += goblin["leczenie"]
-        print(f"{goblin["imie"]} leczy sie o {goblin["leczenie"]} punktow. jego hp to {goblin["hp"]}")
+        goblin['hp'] += goblin['leczenie']
+        print(f"{goblin['imie']} leczy sie o {goblin['leczenie']} punktow. jego hp to {goblin['hp']}")
     elif akcja_goblina == "obrona":
         goblin["obrona"] += 3
-        print(f"{goblin["imie"]} zwieksza swoja obrone o 5. jego obrona to {goblin["obrona"]}")
+        print(f"{goblin['imie']} zwieksza swoja obrone o 5. jego obrona to {goblin['obrona']}")
         if postac["hp"] <= 0:
             print("goblin wygrywa!")
 
