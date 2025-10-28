@@ -49,24 +49,24 @@ wartosc_zlego_owocu = {
 
 while int(postac['hp_postaci']) > 0 and int(goblin['hp_goblina']) > 0:
     postac['pozycja_postaci'] += 1
-    print("znajdujesz sie na 1 polu")
+    print("zmieniasz pozycje")
 
     # losujemy co przytrawi sie postaci
     wydarzenia = random.choice(["dobry owoc", "zly owoc", "nic"])
 
-if wydarzenia == "dobry owoc":
-    owoc = random.choice(dobre_owoce)
-    postac['hp_postaci'] += int(wartosc_dobrego_owocu[owoc])
-    postac['sila_postaci'] += int(wartosc_dobrego_owocu[owoc])
-    print("twoja postac znalazla " + owoc + " i zyskuje punkty zdrowia i sily.")
-elif wydarzenia == "zly owoc":
-    owoc = random.choice(zle_owoce)
-    postac["hp_postaci"] += int(wartosc_zlego_owocu[owoc])
-    postac["sila_postaci"] += int(wartosc_zlego_owocu[owoc])
-    print("twoja postac znalazla " + owoc + " i traci punkty zdrowia i sily.")
-else:
+    if wydarzenia == "dobry owoc":
+        owoc = random.choice(dobre_owoce)
+        postac['hp_postaci'] += int(wartosc_dobrego_owocu[owoc])
+        postac['sila_postaci'] += int(wartosc_dobrego_owocu[owoc])
+        print("twoja postac znalazla " + owoc + " i zyskuje punkty zdrowia i sily.")
+    elif wydarzenia == "zly owoc":
+        owoc = random.choice(zle_owoce)
+        postac["hp_postaci"] += int(wartosc_zlego_owocu[owoc])
+        postac["sila_postaci"] += int(wartosc_zlego_owocu[owoc])
+        print("twoja postac znalazla " + owoc + " i traci punkty zdrowia i sily.")
+    else:
     # nic sie nie wydarzylo, twoja postac idzie dalej
-    print("nic sie nie wydarzylo, twoja postac idzie dalej")
+        print("nic sie nie wydarzylo, twoja postac idzie dalej")
 
     # starcie goblina z postacia
     #atak postaci
