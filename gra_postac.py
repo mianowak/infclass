@@ -81,8 +81,9 @@ while int(postac['hp']) > 0 and int(goblin['hp']) > 0:
     elif akcja_postaci == "obrona":
         postac["obrona"] += 5
         print(f"{postac['imie']} zwieksza swoja obrone o 5. jego obrona to {postac['obrona']}")
-        if goblin["hp"] <= 0:
+    if goblin["hp"] <= 0:
             print("postac wygrywa!")
+            break
     #atak goblina
     akcja_goblina = input("wybierz akcje goblina: atak lub leczenie lub obrona:")
     if akcja_goblina == "atak":
@@ -95,7 +96,7 @@ while int(postac['hp']) > 0 and int(goblin['hp']) > 0:
     elif akcja_goblina == "obrona":
         goblin["obrona"] += 3
         print(f"{goblin['imie']} zwieksza swoja obrone o 5. jego obrona to {goblin['obrona']}")
-        if postac["hp"] <= 0:
+    if postac["hp"] <= 0:
             print("goblin wygrywa!")
 
 
