@@ -5,24 +5,24 @@ imie = input("podaj imie swojej postaci: ")
 # dalsze tworzenie postaci 
 postac = {
     "imie_postaci": imie,
-    "hp_postaci": "100",
-    "atak_postaci": "25",
-    "sila_postaci": "30",
-    "leczenie_postaci": "20",
-    "obrona_postaci": "10",
-    "pozycja_postaci": "0"
+    "hp_postaci": 100,
+    "atak_postaci": 25,
+    "sila_postaci": 30,
+    "leczenie_postaci": 20,
+    "obrona_postaci": 10,
+    "pozycja_postaci": 0
 }
 
 print(imie, "rozpoczyna gre")
 
 goblin = {
     "imie_goblina": "goblin",
-    "hp_goblina": "60",
-    "sila_goblina": "15",
-    "atak_goblina": "20",
-    "leczenie_goblina": "15",
-    "obrona_goblina": "5",
-    "pozycja_goblina":"10"
+    "hp_goblina": 60,
+    "sila_goblina": 15,
+    "atak_goblina": 20,
+    "leczenie_goblina": 15,
+    "obrona_goblina": 5,
+    "pozycja_goblina": 10
 }
 
 #dobre owoce
@@ -32,19 +32,19 @@ dobre_owoce = ["banan","malina","mango","czeresnia","winogrono"]
 zle_owoce = ["greifrut", "cytryna","czarna porzeczka","sliwka","pomarancza"]
 
 wartosc_dobrego_owocu = {
-    "banan": "7",
-    "malina": "5",
-    "mango": "6",
-    "czeresnia": "8",
-    "winogrono": "4"
+    "banan": 7,
+    "malina": 5,
+    "mango": 6,
+    "czeresnia": 8,
+    "winogrono": 4
 }
 
 wartosc_zlego_owocu = {
-    "greifrut": "-6",
-    "cytryna": "-3",
-    "czarna porzeczka": "-4",
-    "sliwka": "-7",
-    "pomarancza": "-2"
+    "greifrut": -6,
+    "cytryna": -3,
+    "czarna porzeczka": -4,
+    "sliwka": -7,
+    "pomarancza": -2
 }
 
 while int(postac['hp_postaci']) > 0 and int(goblin['hp_goblina']) > 0:
