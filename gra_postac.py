@@ -4,25 +4,25 @@ imie = input("podaj imie swojej postaci: ")
 
 # dalsze tworzenie postaci 
 postac = {
-    "imie_postaci": imie,
-    "hp_postaci": 100,
-    "atak_postaci": 25,
-    "sila_postaci": 30,
-    "leczenie_postaci": 20,
-    "obrona_postaci": 10,
-    "pozycja_postaci": 0
+    "imie": imie,
+    "hp": 100,
+    "atak": 25,
+    "sila": 30,
+    "leczenie": 20,
+    "obrona": 10,
+    "pozycja": 0
 }
 
 print(imie, "rozpoczyna gre")
 
 goblin = {
-    "imie_goblina": "goblin",
-    "hp_goblina": 60,
-    "sila_goblina": 15,
-    "atak_goblina": 20,
-    "leczenie_goblina": 15,
-    "obrona_goblina": 5,
-    "pozycja_goblina": 10
+    "imie": "goblin",
+    "hp": 60,
+    "sila": 15,
+    "atak": 20,
+    "leczenie": 15,
+    "obrona": 5,
+    "pozycja": 10
 }
 
 #dobre owoce
@@ -47,8 +47,8 @@ wartosc_zlego_owocu = {
     "pomarancza": -2
 }
 
-while int(postac['hp_postaci']) > 0 and int(goblin['hp_goblina']) > 0:
-    postac['pozycja_postaci'] += 1
+while int(postac['hp']) > 0 and int(goblin['hp']) > 0:
+    postac['pozycja'] += 1
     print("zmieniasz pozycje")
 
     # losujemy co przytrawi sie postaci
@@ -56,13 +56,13 @@ while int(postac['hp_postaci']) > 0 and int(goblin['hp_goblina']) > 0:
 
     if wydarzenia == "dobry owoc":
         owoc = random.choice(dobre_owoce)
-        postac['hp_postaci'] += int(wartosc_dobrego_owocu[owoc])
-        postac['sila_postaci'] += int(wartosc_dobrego_owocu[owoc])
+        postac['hp'] += int(wartosc_dobrego_owocu[owoc])
+        postac['sila'] += int(wartosc_dobrego_owocu[owoc])
         print("twoja postac znalazla " + owoc + " i zyskuje punkty zdrowia i sily.")
     elif wydarzenia == "zly owoc":
         owoc = random.choice(zle_owoce)
-        postac["hp_postaci"] += int(wartosc_zlego_owocu[owoc])
-        postac["sila_postaci"] += int(wartosc_zlego_owocu[owoc])
+        postac["hp"] += int(wartosc_zlego_owocu[owoc])
+        postac["sila"] += int(wartosc_zlego_owocu[owoc])
         print("twoja postac znalazla " + owoc + " i traci punkty zdrowia i sily.")
     else:
     # nic sie nie wydarzylo, twoja postac idzie dalej
