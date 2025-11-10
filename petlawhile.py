@@ -95,3 +95,71 @@ else:
             silnia *= n
             n -= 1
             print(silnia)
+
+ # znajdz maksymalny element w lisci liczb
+
+
+x = [3,4,6,5,8,2,1]
+if len(x) == 0:
+    print("lista pusta")
+else:
+    max_liczba = x[0]
+    for i  in range(len(x)):
+        if x[i] > max_liczba:
+            max_liczba = x[i]
+    print(max_liczba)
+    print(max(x))
+    
+    # wyswietl z pomoca for wszystkie indeksy i wartosci elementow listy
+    x = [5,6,5,6,6,7,8,9]
+    for i, v in enumerate(x):
+       print("Indeks:", i, "Wartosc:", v)
+ # usuwaj elementy z listy az lista bedzie pusta
+    x = [8,9,0,3,4,4,5,5]
+    while len(x) > 0:
+        print("Usuwam:", x[0])
+        x.pop(0)
+    print("Lista pusta")
+
+    x = [5,6,6,7,8,2,3]
+unikatowe = []
+for el in x:
+    if el not in unikatowe:
+        unikatowe.append(el)
+x = unikatowe
+print(x)
+print(list(set(x)))
+
+# wygeneruj liste n-elementowa liste liczb calkowitych z przedzialu od a do b
+from random import randint
+n = int(input("podaj liczbe n:"))
+a = int(input("podaj liczbe a:"))
+b = int(input("podaj liczbe b:"))
+los = []
+for _ in range(n):
+    los.append(randint(a,b))
+print(los)
+
+
+#podaj ile razy podana liczba wystepuje w liscie
+x = [5,5,6,6,7,7,7,8,3]
+ile = 0
+liczba= int(input("podaj liczbe:"))
+while ile < len(x):
+    if x[ile] == liczba:
+        ile += 1
+    else:
+        ile += 1
+print(ile)
+
+# oblicz srednia arytmetyczna liczb w liscie
+x = [5,6,7,8,9,10]
+if not x:
+    print("lista pusta")
+else:
+    s = 0
+    i = 0
+    while i < len(x):
+        s += x[i]
+        i += 1
+print(s / len(x))
