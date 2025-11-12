@@ -129,7 +129,6 @@ for el in x:
 x = unikatowe
 print(x)
 print(list(set(x)))
-
 # wygeneruj liste n-elementowa liste liczb calkowitych z przedzialu od a do b
 from random import randint
 n = int(input("podaj liczbe n:"))
@@ -163,3 +162,45 @@ else:
         s += x[i]
         i += 1
 print(s / len(x))
+
+n = int(input())
+for i in range (n + 1):
+    print(f"2^{i} == {2**i}")
+
+ccc = [1,2,3,4,5,5]
+i = 0
+while i < len (ccc):
+    print(f"pod ind {i} ---- {ccc[i]}
+    i += 1
+for el in ccc:
+print(el)
+
+inp = int(input())
+for el in ccc:
+    if inp == el:
+        print("jest taki element")
+        cz_jest = True
+        break
+if cz_jest:
+    print ("jest")
+else:
+    print("nie ma")
+
+i = 0
+while i < len (ccc):
+    for inp == ccc[i]:
+    cz_jest = True
+    break
+i += 1
+
+if cz_jest:
+    print("jest")
+
+else:
+    print("nie ma")
+
+    
+
+
+
+
