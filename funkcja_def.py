@@ -1,32 +1,41 @@
 import math
-import Pi
-
-def pkwadrat(a:float) -> float:
+PI = math.pi
+# pole plaskie
+def p_kwadrat(a:float) -> float:
 	feturn a**2
 
-def pprostokat(a:float,b:float)-> float:
+def p_prostokat(a:float,b:float)-> float:
 	return a*b
 
-def prownolegloboku(a:float,h:float)-> float:
+def p_rownolegloboku(a:float,h:float)-> float:
 	return a*h
 
-def ptrojkata(a:float,h:float)->float:
+def p_trojkata(a:float,h:float)->float:
 	return a*h/2
 
-def pcszescianu(a:float )->float:
+def p_kolo(r:float)->float:
+ 	return PI*r**2
+# pole calkowite bryl
+def pc_szescianu(a:float )->float:
 	return 6*a**2
 
-def pcprostopadloscian(a:float,b:float,c:float)->float
+def pc_prostopadloscian(a:float,b:float,c:float)->float:
 	return 2*a*b+2*b*c+2*a*c
 
-def pcgraniastoslup(Pp:float,Pb:float)->float:
+def pc_graniastoslup(Pp:float,Pb:float)->float:
 	return 2*Pp+Pb
 
-def pcostroslup(Pp:float,Pb:float)->float:
+def pc_ostroslup(Pp:float,Pb:float)->float:
 	return Pp+Pb
 
-def pckula(r:float)->float:
-	return 4*Pi*r**2 
+def pc_kula(r:float)->float:
+	return 4*PI*r**2 
 
-def pcstozek(r:float,l:float)->float:
-	return Pi
+def pc_stozek(r:float,l:float)->float:
+	return PI*r**2 + PI*r*l
+
+def pc_walec(r:float,H:float)->float:
+	return 2*PI*r**2 + 2*PI*r*H
+	
+	
+	
