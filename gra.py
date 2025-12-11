@@ -76,35 +76,41 @@ def odmien(zabudowa):
         return "KARCZMY"
     elif zabudowa == "Tajemniczy las":
         return "TAJEMNICZY LAS"
-    elif zabudowa == "Stara zniszczona stodoła":
-        return "STAREJ, ZNISZCZONEJ STODOŁY"
-    elif zabudowa == "Chłopska chata":
-        return "CHŁOPSKIEJ CHATY"
+    elif zabudowa == "Stara opuszczona stodoła":
+        return "STAREJ, OPUSZCZONEJ STODOŁY"
+    elif zabudowa == "Most":
+        return "MOST"
     elif zabudowa == "Zniszczona chłopska chata":
         return "ZNISZCZONEJ CHŁOPSKIEJ CHATY"
-    elif zabudowa == "Jaskinia":
-        return "JASKINI"
+    elif zabudowa == "Opuszczona dzungla":
+        return "OPUSZCZONA DZUNGLA"
+    elif zabudowa == "Brama":
+        return "BRAMA"
+    elif zabudowa == "Stara zniszczona stodola":
+        return "STAREJ ZNISZCONEJ STODOLY"
+    elif zabudowa == "zniszczony królewski zamek":
+        return "ZNISZCZONEGO KROLEWSKIEGO ZAMKU"
 
 def obslug_karczmy(postac):
     print("""
     Straszny tu gwar,
-    wszędzie pełno zapijaczonych wieśniaków,
-    jest miejsce przy szynkwasie
+    wszędzie pełno tańczących wieśniaków,
+    jest dla ciebie miejsce przy barze
     """)
 
     while True:
         trzezwosc = postac['hp'] / 2
         print("\n    Co robisz")
-        print("    [b] - dawaj tu kufel piwa, [h] - podaj mi puchar miodu, [q] - wyjście")
+        print("    [b] - daj mi tu jakies picie, [h] - podaj mi puchar miodu, [q] - wyjście")
         a = input("> ")
         if a == "b":
             trzezwosc -= 3
             if (trzezwosc <= 0):
-                print("Upiłeś się... Wykopali Cię z karczmy")
+                print("Wypiles za duzo... Wykopali Cię z karczmy")
         elif a == "h":
             trzezwosc -= 4
             if (trzezwosc <= 0):
-                print("Upiłeś się... Wykopali Cię z karczmy")
+                print("Wypiles za duzo... Wykopali Cię z karczmy")
         elif a == "q":
             break
 
@@ -117,7 +123,7 @@ def obslug_sklepu(postac):
 
     while True:
         print(f"\n    Co robisz  [sakiewka: {postac['wallet']}$]")
-        print("    [z] -  kupuje Small Health Potion (3$), [a] - kupuję Big Health Potion (4$), [b] - Small Attack Potion, [c] - Big attack Potion, [q] - wyjście")
+        print("    [z] -  kupuje Health Potion (3$), [a] -  kupuje Attack Potion(4$), [q] - wyjście")
         a = input("> ")
         if a == "z":
             if postac["wallet"] >= 3:
@@ -228,3 +234,4 @@ def main():
 
 # tu sie wszystko zaczyna - odpalamy główną funkcję
 main()
+
