@@ -234,4 +234,11 @@ def main():
 
 # tu sie wszystko zaczyna - odpalamy główną funkcję
 main()
+printf("========================================
+        KONIEC GRY — KRAINA CIENI
+========================================
+Przeszedłeś przez mrok, pokonałeś strach.
+Twoja przygoda dobiegła końca.
+Dziękujemy za grę!
+========================================")
 
