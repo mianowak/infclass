@@ -117,7 +117,7 @@ def obslug_sklepu(postac):
 
     while True:
         print(f"\n    Co robisz  [sakiewka: {postac['wallet']}$]")
-        print("    [z] - kupiję eliksir zdrowia (3$), [a] - kupuję eliksir ataku (4$), [q] - wyjście")
+        print("    [z] -  kupuje Small Health Potion (3$), [a] - kupuję Big Health Potion (4$), [b] - Small Attack Potion, [c] - Big attack Potion, [q] - wyjście")
         a = input("> ")
         if a == "z":
             if postac["wallet"] >= 3:
