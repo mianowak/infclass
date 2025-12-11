@@ -122,7 +122,7 @@ mapa = [
     { "pole": "na drodze do wsi Lirwoda", "zabudowa": None, "postac": None },
     { "pole": "na drodze do wsi Lirwoda", "zabudowa": None, "postac": None },
     { "pole": "na drodze do wsi Lirwoda", "zabudowa": "Stara zniszczona stodoła", "postac": "Nietoperze" },
-    { "pole": "we wsi Lirwoda", "zabudowa": "Chłopska chata", "postac": None },
+    { "pole": "we wsi Lirwoda", "zabudowa": None, "postac": None },
     { "pole": "we wsi Lirwoda", "zabudowa": "Zniszczona chłopska chata", "postac": "Wampir" },
     { "pole": "na drodze do lasu", "zabudowa": None, "postac": None },
     { "pole": "w gęstym lesie", "zabudowa": None, "postac": None },
