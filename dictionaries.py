@@ -1,14 +1,14 @@
 
 bohaterowie = {
-    "Rycerz Herbowy": {
-        "name": "Zbyszko Obłędny",
+    "Fairy": {
+        "name": "Wrozka",
         "hp": 30,
         "attack": 11,
         "defence": 12,
         "description": "Wspaniały rycerz",
         "wallet": 10
     },
-    "Elfi łucznik": {
+    "Elf": {
         "name": "Leonidas Bystry",
         "hp": 24,
         "attack": 16,
