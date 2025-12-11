@@ -118,7 +118,7 @@ mapa = [
     { "pole": "u wejcia do Dravorn", "zabudowa": "Brama", "postac": None },
     { "pole": "w mieście Dravorn", "zabudowa": "Tajemniczy las", "postac": "Orc },
     { "pole": "w mieście Dravorn", "zabudowa": "Karczma", "postac": None },
-    { "pole": "wyjcie z Dravorn", "zabudowa": "Brama", "postac": Troll },
+    { "pole": "wyjcie z Dravorn", "zabudowa": "Stara opuszczona stodola", "postac": Troll },
     { "pole": "na drodze do wsi Lirwoda", "zabudowa": None, "postac": None },
     { "pole": "na drodze do wsi Lirwoda", "zabudowa": None, "postac": None },
     { "pole": "na drodze do wsi Lirwoda", "zabudowa": "Stara zniszczona stodoła", "postac": "Nietoperze" },
