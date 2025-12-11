@@ -4,6 +4,23 @@ from dictionaries import bohaterowie
 from dictionaries import wrogowie
 from dictionaries import mapa
 
+print("""*******************************************************
+          Witaj w Krainie Cieni!
+*******************************************************
+
+Od wieków w tej krainie panował spokój i dostatek. 
+Jednak pewnej nocy mroczne siły pojawiły się w lasach i wioskach, 
+zagrażając bezpieczeństwu mieszkańców.  
+
+Ty, odważny bohater, stajesz przed wyborem swojej drogi: 
+czy staniesz do walki z potworami, odkryjesz tajemnice starożytnych ruin 
+czy pomożesz mieszkańcom w potrzebie?  
+
+Twoja przygoda właśnie się zaczyna...
+Przygotuj się na niebezpieczeństwa, tajemnice i wielkie wyzwania!
+
+*******************************************************""")
+
 def wybor_postaci():
     print("""
     **********************
