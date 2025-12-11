@@ -2,7 +2,7 @@
 bohaterowie = {
     "Fairy": {
         "name": "Wrozka",
-        "hp": 30,
+        "hp": 32,
         "attack": 11,
         "defence": 12,
         "description": "Wspaniały rycerz",
@@ -10,32 +10,60 @@ bohaterowie = {
     },
     "Elf": {
         "name": "Leonidas Bystry",
-        "hp": 24,
+        "hp": 32,
         "attack": 16,
         "defence": 8,
         "description": "Szybkostrzelny łucznik",
         "wallet": 14
     },
-    "Krasnoludzki młociarz": {
-        "name": "Gimli Przysadzisty",
+    "Sorceres": {
+        "name": "Czarodziejka",
         "hp": 32,
         "attack": 10,
         "defence": 15,
         "description": "Włada młotem",
         "wallet": 8
-    }
+    },
+    "Knight": {
+         "name": "Rycerz",
+        "hp": 32,
+        "attack": 10,
+        "defence": 15,
+        "description": "Włada młotem",
+        "wallet": 8
+    },
+        
+    "Aladdin": {
+        "name": "Aladyn",
+        "hp": 32,
+        "attack": 10,
+        "defence": 15,
+        "description": "Włada młotem",
+        "wallet": 8
+    },
+    "Prince": {
+        "name": "Książę",
+        "hp": 32,
+        "attack": 10,
+        "defence": 15,
+        "description": "Włada młotem",
+        "wallet": 8
+        
+        
+        
+        
 }
 
 wrogowie = {
-    "Wilki": {
-        "name": "Mordercza wataha",
+    "Goblin": {
+        "name": "Goblin",
         "hp": 21,
         "attack": 7,
         "defence": 8,
         "description": "Obmierzła gadzina"
     },
-    "Goblin": {
-        "name": "Parszywiec Bagienny",
+    "Wolf": {
+        "name": "Wilk",
         "hp": 19,
         "attack": 6,
         "defence": 6,
@@ -69,21 +97,21 @@ wrogowie = {
         "defence": 6,
         "description": "Wielce niebezpieczna istota"
     },
-    "Driada": {
-        "name": "Daria Rudowłosa",
+    "Dragon": {
+        "name": "Złoty smok",
         "hp": 16,
         "attack": 6,
         "defence": 5,
-        "description": "Piękna i niebezpieczna"
+        "description": "Piękny i niebezpieczny"
     }
 }
 
 mapa = [
     { "pole": "na leśnej ścieżce", "zabudowa": None, "postac": None },
     { "pole": "na leśnej ścieżce", "zabudowa": None, "postac": None },
-    { "pole": "na leśnej polanie", "zabudowa": None, "postac": "Wilki" },
+    { "pole": "na leśnej polanie", "zabudowa": Brama, "postac": "Goblin" },
     { "pole": "na leśnej ścieżce", "zabudowa": None, "postac": None },
-    { "pole": "na skraj lasu", "zabudowa": None, "postac": "Goblin" },
+    { "pole": "na skraj lasu", "zabudowa": None, "postac": None},
     { "pole": "na drodze do Dravorn", "zabudowa": None, "postac": None },
     { "pole": "na drodze do Dravorn", "zabudowa": "Karczma", "postac": None },
     { "pole": "na drodze do Dravorn", "zabudowa": "Sklep", "postac": None },
