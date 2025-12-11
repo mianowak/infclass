@@ -38,9 +38,13 @@ def wybor_postaci():
         print(f"    {idx}:   {key}  {value['name']}  zdrowie:{value['hp']}, atak:{value['attack']}, obrona:{value['defence']}")
 
     while True:
+        # tu oczekuję że gracz wpisze 1,2,3 jako wybor postaci
         idx_wybranej_postaci = int(input("\nWybierz jedną z postaci > "))
         
+        # sprawdzam czy gracz wybral wiecej jak 0 al mniej lub rowne dlugosci tablicy tymczasowej
+        # teraz tablica tymczasowa ma 3 elementy wiec  3 <= idx_wybranej_postaci > 0
         if idx_wybranej_postaci > 0 and idx_wybranej_postaci <= len(tabela_tymczasowa):
+            # tablica zaczyna sie od indeksu 0 wiec jak gracz wpisze 1 to musimy pobrac klucz z indeksu 0, jak wpisze 2 to z indeksu 1 - dlatego odejmuje 1
             wybrana_postac = bohaterowie[tabela_tymczasowa[idx_wybranej_postaci - 1]]
             return wybrana_postac
 
