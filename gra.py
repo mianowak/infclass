@@ -74,8 +74,8 @@ def obsluga_pola(pole, postac):
 def odmien(zabudowa):
     if zabudowa == "Karczma":
         return "KARCZMY"
-    elif zabudowa == "Sklep":
-        return "SKLEPU"
+    elif zabudowa == "Tajemniczy las":
+        return "TAJEMNICZY LAS"
     elif zabudowa == "Stara zniszczona stodoła":
         return "STAREJ, ZNISZCZONEJ STODOŁY"
     elif zabudowa == "Chłopska chata":
