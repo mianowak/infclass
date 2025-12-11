@@ -74,6 +74,8 @@ def obsluga_pola(pole, postac):
 def odmien(zabudowa):
     if zabudowa == "Karczma":
         return "KARCZMY"
+    elif zabudowa == "Sklep":
+        return "SKLEPY"
     elif zabudowa == "Tajemniczy las":
         return "TAJEMNICZY LAS"
     elif zabudowa == "Stara opuszczona stodoła":
@@ -123,17 +125,25 @@ def obslug_sklepu(postac):
 
     while True:
         print(f"\n    Co robisz  [sakiewka: {postac['wallet']}$]")
-        print("    [z] -  kupuje Health Potion (3$), [a] -  kupuje Attack Potion(4$), [q] - wyjście")
+        print("    [SHP] -  kupuje Small Health Potion (2$), [BHP] -  kupuje Big Health Potion (3$), [SAP] -  kupuje Small Attack Potion(4$), [GAP] -  kupuje Big Attack Potion(5$), [q] - wyjście")
         a = input("> ")
-        if a == "z":
-            if postac["wallet"] >= 3:
-                postac["wallet"] -= 3
+        if a == "SHP":
+            if postac["wallet"] >= 2:
+                postac["wallet"] -= 2
                 postac["hp"] += random.randint(2, 5)
                 
                 print(F"Twoje zdrowie wzrosło do: {postac['hp']}")
             else:
                 print(f"Nie masz pieniedzy... zostało Ci {postac['wallet']}$")
-        elif a == "a":
+        elif a == "BHP":
+            if postac["wallet"] >= 3:
+               postac["wallet"] -= 3
+               postac["hp"] += random.randint(3,5)   
+                      
+               print(F"Twoje zdrowie wzrosło do: {postac['hp']}")
+            else:
+               print(f"Nie masz pieniedzy... zostało Ci {postac['wallet']}$")
+        elif a == "SAP":
             if postac["wallet"] >= 4:
                 postac["wallet"] -= 4
                 postac["attack"] += random.randint(1, 4)
@@ -141,6 +151,15 @@ def obslug_sklepu(postac):
                 print(F"Siła Twojego ataku wzrosła do: {postac['attack']}")
             else:
                 print(f"Nie masz pieniedzy... zostało Ci {postac['wallet']}$")
+         elif a == "SAP":
+             if postac["wallet"] >= 5:
+                postac["wallet"] -= 5
+                postac["attack"] += random.randint(1, 5)
+                
+                print(F"Siła Twojego ataku wzrosła do: {postac['attack']}")
+            else:
+                print(f"Nie masz pieniedzy... zostało Ci {postac['wallet']}$")
+                      
         elif a == "q":
             break
         
