@@ -10,12 +10,15 @@ def wybor_postaci():
         WYBÓR POSTACI
     **********************
         """)
+    # tablica tymczasowa żeby wpisać klucze z typami bohaterów "Rycerz Herbowy", "Elfi łucznik", "Krasnoludzki młociarz"
+    # nazwy są dlugie i wybieranie po nazwie jest meczące
     tabela_tymczasowa = []
     idx = 0
     for key, value in bohaterowie.items():
+        # zapamietuje w tablicy tymczasowej klucze "Rycerz Herbowy", "Elfi łucznik", "Krasnoludzki młociarz"
         tabela_tymczasowa.append(key)
-        print(f"    {idx + 1}:   {key}  {value['name']}  zdrowie:{value['hp']}, atak:{value['attack']}, obrona:{value['defence']}")
         idx += 1
+        print(f"    {idx}:   {key}  {value['name']}  zdrowie:{value['hp']}, atak:{value['attack']}, obrona:{value['defence']}")
 
     while True:
         idx_wybranej_postaci = int(input("\nWybierz jedną z postaci > "))
