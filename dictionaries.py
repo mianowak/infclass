@@ -5,7 +5,7 @@ bohaterowie = {
         "hp": 32,
         "attack": 11,
         "defence": 12,
-        "description": "Wspaniały rycerz",
+        "description": "Wspaniała wróżka",
         "wallet": 10
     },
     "Elf": {
