@@ -250,14 +250,16 @@ def main():
     print("Wchodzisz do gry...")
     #odpalam główną pętlę gry, któ jest w funkcji glowna_petla
     glowna_petla(wybrana_postac)
-
-# tu sie wszystko zaczyna - odpalamy główną funkcję
-main()
-printf("========================================
+    
+    printf("========================================
         KONIEC GRY — KRAINA CIENI
 ========================================
 Przeszedłeś przez mrok, pokonałeś strach.
 Twoja przygoda dobiegła końca.
 Dziękujemy za grę!
 ========================================")
+
+# tu sie wszystko zaczyna - odpalamy główną funkcję
+main()
+
 
