@@ -5,7 +5,7 @@ class Kwiatek:
         self.imie = imie
         self.zyje = True
         self.hp = 100
-        self.fotosynteza = 
+        self.fotosynteza = 10
         
     def inf(self):
         print(f"""
@@ -25,6 +25,13 @@ class Kwiatek:
         
     def take_dps (self,a):
         self.hp -= a
+        
+        
+    def heal(self):   # <- 🌱 FOTOSYNTEZA (leczenie)
+        self.hp += self.fotosynteza
+        if self.hp > 100:
+            self.hp = 100
+        print(f"{self.imie} leczy się o {self.fotosynteza} 
         
 k1 = Kwiatek("alepim cepq")
 k2 = Kwiatek("tulipan")
