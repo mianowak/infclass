@@ -27,7 +27,7 @@ class Kwiatek:
         self.hp -= a
         
         
-    def heal(self):   # <- 🌱 FOTOSYNTEZA (leczenie)
+    def heal(self):   
         self.hp += self.fotosynteza
         if self.hp > 100:
             self.hp = 100
@@ -36,20 +36,42 @@ class Kwiatek:
 k1 = Kwiatek("alepim cepq")
 k2 = Kwiatek("tulipan")
 
+ 
 while k1.czy_zyje() and k2.czy_zyje():
-    print("gracz1")
-    inp = input()
+
+    
+        print("Gracz 1 (a = atak, b = leczenie)")
+        inp = input()
+
     if inp == "a":
-        pass
+        dmg = k1.atak()
+        k2.take_dps(dmg)
+        print(f"{k1.imie} zadaje {dmg} obrażeń!")
+
     elif inp == "b":
-        pass
-    print("gracz2")
-    if inp == "a":
-        pass
-    elif inp == "b":
-        pass
+        k1.heal()
+    
+    if not k2.czy_zyje():
+        break
         
-print("wygral")
+
+    print("Gracz 2 (a = atak, b = leczenie)")
+    inp = input()
+
+    if inp == "a":
+        dmg = k2.atak()
+        k1.take_dps(dmg)
+        print(f"{k1.imie} zadaje {dmg} obrażeń!")
+
+    elif inp == "b":
+        k2.heal
+    
+print("Koniec gry")
+
+if k1.czy_zyje():
+    print("Gracz 1 wygrywa")
+else k2.czy_zyje():
+    print("Gracz 2 wygrywa")
 
 k1.inf()
 k2.inf()
