@@ -1,7 +1,7 @@
 from random import randint
 
 class Kwiatek:
-    def _init_ (self,imie):
+    def __init__ (self,imie):
         self.imie = imie
         self.zyje = True
         self.hp = 100
@@ -64,7 +64,7 @@ while k1.czy_zyje() and k2.czy_zyje():
         print(f"{k1.imie} zadaje {dmg} obrażeń!")
 
     elif inp == "b":
-        k2.heal
+        k2.heal()
     
 print("Koniec gry")
 
