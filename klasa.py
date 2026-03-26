@@ -62,8 +62,58 @@ class Uczen:
 
 
 
-u1 = Uczen("Adam")
-u2 = Uczen("Dawid")
+# rodzaje uczniow do wyboru
+class Kreatywny(Uczen):
+    def __init__(self, imie):
+        super().__init__(imie)
+        self.atak += 10
+        self.hp += 30
+
+class Pilny(Uczen):
+    def __init__(self, imie):
+        super().__init__(imie)
+        self.leczenie += 10
+
+class Spokojny(Uczen):
+    def __init__(self, imie):
+        super().__init__(imie)
+        self.hp += 60
+        self.atak -= 5
+
+class Aktywny(Uczen):
+    def __init__(self, imie):
+        super().__init__(imie)
+        self.atak += 5
+
+    def atakuje(self):
+        # szansa na podwójny strzał
+        if randint(1, 3) == 1:
+            print("Podwójny strzał!")
+            return self.atak * 2
+        return self.atak
+# wybor swojej postaci
+print("Wybierz ucznia:")
+print("1 - Kreatywny")
+print("2 - Pilny")
+print("3 - Spokojny")
+print("4 - Aktywny")
+
+wybor = input("Twój wybór: ")
+
+if wybor == "1":
+    u1 = Kreatywny("Gracz")
+elif wybor == "2":
+    u1 = Pilny("Gracz")
+elif wybor == "3":
+    u1 = Spokojny("Gracz")
+elif wybor == "4":
+    u1 = Aktywny("Gracz")
+else:
+    u1 = Uczen("Gracz")
+    
+klasy = [Kreatywny, Pilny, Spokojny, Aktywny]
+u2 = choice(klasy)("Bot")
+
 
 # losowanie jaki item wyciagnie z plecaka
 itemy = ["dlugopis", "kanapka", "ksiazka"]
@@ -90,6 +140,7 @@ while u1.czy_zyje() and u2.czy_zyje():
         u1.dodaje_hp()
 
 
+        
     # u1 czasem używa itemu
     if u1.ekwipunek:
         u1.uzyj_item(u1.ekwipunek[0])
@@ -107,10 +158,7 @@ while u1.czy_zyje() and u2.czy_zyje():
     if randint(1, 3) == 1:
         u1.dodaje_hp()
 
-    # u2 używa itemu
-    if u2.ekwipunek:
-        u2.uzyj_item(u2.ekwipunek[0])
 
 print("KONIEC WALKI")
-print(f"{u1.imie} HP: {u1.hp}")
-print(f"{u2.imie} HP: {u2.hp}")
+print(f"Uczen HP: {u1.hp}")
+print(f"Bot HP: {u2.hp}")
