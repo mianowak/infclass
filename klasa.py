@@ -84,6 +84,12 @@ while u1.czy_zyje() and u2.czy_zyje():
     u2.take_dps(dmg)
     print(f"{u1.imie} zadaje {dmg} dmg")
 
+
+    # teraz losujemy o ile leczy swoje hp uczen 1
+    if randint(1, 3) == 1:
+        u1.dodaje_hp()
+
+
     # u1 czasem używa itemu
     if u1.ekwipunek:
         u1.uzyj_item(u1.ekwipunek[0])
@@ -95,6 +101,11 @@ while u1.czy_zyje() and u2.czy_zyje():
     dmg = u2.atakuje()
     u1.take_dps(dmg)
     print(f"{u2.imie} zadaje {dmg} dmg")
+
+
+    # teraz losujemy o ile ulepszy swoje hp uczen 2
+    if randint(1, 3) == 1:
+        u1.dodaje_hp()
 
     # u2 używa itemu
     if u2.ekwipunek:
