@@ -32,16 +32,16 @@ class Uczen:
         self.hp += self.leczenie
         return self.hp
 
-    # DODAWANIE ITEMÓW
+    # dodajemy item y
     def dodaj_item(self, item):
         self.ekwipunek.append(item)
         print(f"{self.imie} dostał: {item}")
 
-    # POKAZ EKWIPUNEK
+    # robimy tak zeby pokazal nam ekwipunek
     def pokaz_eq(self):
         print(f"Ekwipunek {self.imie}: {self.ekwipunek}")
 
-    # UŻYWANIE ITEMÓW
+    # uzywamy itemow
     def uzyj_item(self, item):
         if item in self.ekwipunek:
             if item == "kanapka":
@@ -61,11 +61,11 @@ class Uczen:
             print("Nie masz tego przedmiotu")
 
 
-# TWORZENIE POSTACI
+
 u1 = Uczen("Adam")
 u2 = Uczen("Dawid")
 
-# LOSOWE ITEMY NA START
+# losowanie jaki item wyciagnie z plecaka
 itemy = ["dlugopis", "kanapka", "ksiazka"]
 
 for _ in range(2):
@@ -75,7 +75,7 @@ for _ in range(2):
 u1.pokaz_eq()
 u2.pokaz_eq()
 
-# WALKA
+# walka
 while u1.czy_zyje() and u2.czy_zyje():
     print("Tura")
 
