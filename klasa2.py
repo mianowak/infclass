@@ -85,7 +85,7 @@ while u1.czy_zyje() and u2.czy_zyje():
     print(f"{u1.imie} zadaje {dmg} dmg")
 
     # u1 czasem używa itemu
-    if u1.placaj:
+    if u1.placak:
         u1.uzyj_item(u1.plecak[0])
 
     if not u2.czy_zyje():
@@ -97,7 +97,7 @@ while u1.czy_zyje() and u2.czy_zyje():
     print(f"{u2.imie} zadaje {dmg} dmg")
 
     # u2 używa itemu
-    if u2.plecaj:
+    if u2.plecak:
         u2.uzyj_item(u2.plecak[0])
 
 print("\nKONIEC WALKI")
