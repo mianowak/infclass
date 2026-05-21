@@ -39,7 +39,7 @@ class Bohater:
         print(f"Życie: {self.zycie}")
         print(f"Energia: {self.energia}")
 
-        print("\nEkwipunek:")
+        print("Ekwipunek:")
 
 
         # PĘTLA FOR
@@ -294,7 +294,7 @@ def wybierz_bohatera():
 
         wybrany_bohater = lista_bohaterow[wybor - 1]
 
-        print("\nWybrano bohatera:")
+        print("Wybrano bohatera:")
         print(wybrany_bohater.imie)
 
         return wybrany_bohater
