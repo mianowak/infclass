@@ -1,4 +1,4 @@
-ef zakonczenie(bohater):
+def zakonczenie(bohater):
 
     print("OSTATNIA WALKA")
     
