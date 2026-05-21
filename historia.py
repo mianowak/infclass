@@ -53,7 +53,7 @@ Charakter:
 
 
 
-    print("\nEkwipunek:")
+    print("Ekwipunek:")
 
 
 
@@ -64,7 +64,7 @@ Charakter:
 
 
 
-    print("\nHistoria bohatera:")
+    print("Historia bohatera:")
 
     print(bohater.historia)
 
