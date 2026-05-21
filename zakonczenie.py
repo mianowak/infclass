@@ -27,7 +27,7 @@ od jednej decyzji.
 
 # gracz wybiera sobie zakonczenie
 
-    print("\nWybierz zakończenie:\n")
+    print("Wybierz zakończenie:\n")
 
     print("1 - Zabij Azratha")
     print("2 - Oszczędź go i wybierz pokój")
@@ -35,7 +35,7 @@ od jednej decyzji.
 
 
 
-    wybor = input("\nWpisz 1 lub 2: ")
+    wybor = input("Wpisz 1 lub 2: ")
 
 
 #1 zakonczenie
@@ -44,9 +44,7 @@ od jednej decyzji.
 
 
 
-        print("\n================================================")
         print("ZAKOŃCZENIE — KRWAWY TRON")
-        print("================================================")
 
 
 
@@ -113,4 +111,4 @@ i pokoju.
 #bledny wybor
     else:
 
-        print("\nNiepoprawny wybór.")
+        print("Niepoprawny wybór.")
