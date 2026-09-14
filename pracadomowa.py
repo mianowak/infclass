@@ -88,3 +88,20 @@ with open("notes.txt", "a", encoding="utf-8") as file:
     file.write(f"{date.strftime('%c')} - {note}\n")
 
 print("Note saved!")
+
+
+# Write a script that counts how many negative numbers are in this file.
+
+with open("example.txt", "r") as data:
+    numbers = [float(number) for number in data.read().split(";") if number.strip()]
+
+print(numbers)
+
+# Write a script that counts how many even numbers are in this file.
+even = 0
+for el in numbers:
+    if el % 2 == 0:
+        even += 1
+
+
+
