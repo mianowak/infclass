@@ -1,5 +1,5 @@
 import random
-
+#write 
 plik = open("zad1.txt", "w")
 
 for i in range(20):
